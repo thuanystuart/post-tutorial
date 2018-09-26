@@ -1,0 +1,19 @@
+.list {
+  background-color: #fff;
+  margin-top: 25px !important;
+}
+
+.container {
+  padding: 60px 200px;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  .link {
+    text-decoration: none;
+    color: unset;
+  }
+}
