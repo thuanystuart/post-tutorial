@@ -49,11 +49,11 @@ class PostDetails extends Component {
   }
 }
 
-const mapStateToProps = ({ posts }, ownProps) => {
-  return { post: posts[ownProps.match.params.id] }
-}
+const mapStateToProps = ({ posts }, ownProps) => ({ post: posts[ownProps.match.params.id] })
+
+const mapDispatchToProps = { fetchPost, deletePost }
 
 export default connect(
   mapStateToProps,
-  { fetchPost, deletePost }
+  mapDispatchToProps
 )(PostDetails)

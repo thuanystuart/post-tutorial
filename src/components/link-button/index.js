@@ -38,6 +38,11 @@ class LinkButton extends PureComponent {
     variant: 'contained',
   }
 
+  handleOnClick = event => {
+    onClick && onClick(event)
+    this.props.history.push(this.props.to)
+  }
+
   render() {
     const {
       children,
@@ -61,10 +66,7 @@ class LinkButton extends PureComponent {
           color={color}
           size={size}
           variant={variant}
-          onClick={event => {
-            onClick && onClick(event)
-            history.push(to)
-          }}
+          onClick={this.handleOnClick}
         >
           {children}
         </Button>
